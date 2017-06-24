@@ -10,6 +10,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.PlatformTransactionManager;
 
 
@@ -18,6 +19,7 @@ import org.springframework.transaction.PlatformTransactionManager;
  */
 @SpringBootApplication
 @MapperScan("com.mayday.mapper")  //扫描mapper
+@EnableScheduling   //开启扫描定时任务
 public class Application {
 
 
