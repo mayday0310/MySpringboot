@@ -52,8 +52,6 @@ public class Application {
 
     public static void main(String [] args){
         SpringApplication.run(Application.class,args);
-        System.out.println("123");
-        System.out.println("在gitbug上加的代码");
     }
 
 
