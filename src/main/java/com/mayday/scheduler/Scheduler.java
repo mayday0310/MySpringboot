@@ -9,15 +9,19 @@ import org.springframework.stereotype.Component;
 public class Scheduler {
 
 
-
     @Scheduled(cron = "0/30 * * * * ?")
-    public void schedule (){
+    public void schedule() {
 
         System.out.println("开始抓取数据..");
-        HttpClientResponseModel model= HttpClientHelper.get("http://cp.eastday.com/data/kaijiang/04/2017-06-24.xml?_=1498220180408","");
+      //  HttpClientResponseModel model = HttpClientHelper.get("http://api.1680210.com/CQShiCai/getBaseCQShiCaiList.do?lotCode=10003", "");
 
-        System.out.println("抓取到的数据为:"+model.getResponseContent());
+   //     System.out.println("抓取到的数据为:" + model.getResponseContent());
+
+    }
+  @Scheduled(cron="0/10 * * * * ?")
+    public  void schedule2(){
+        System.out.println("测试第二个定时器");
+
     }
 
 }
-
